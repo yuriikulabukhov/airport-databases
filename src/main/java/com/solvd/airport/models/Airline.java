@@ -1,7 +1,6 @@
 package com.solvd.airport.models;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class Airline {
     private Long id;

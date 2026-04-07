@@ -5,10 +5,9 @@ public class Plane {
     private String model;
     private String boardNumber;
     private Integer seatsCapacity;
-    private Integer yearProduction; // Тип YEAR в MySQL мапится в Integer
+    private Integer yearProduction;
     private Long airlinesId;
     public Plane() {}
-
     public Plane(Long id, String model, String boardNumber, Integer seatsCapacity,
                  Integer yearProduction, Long airlinesId) {
         this.id = id;
@@ -36,4 +35,16 @@ public class Plane {
 
     public Long getAirlinesId() { return airlinesId; }
     public void setAirlinesId(Long airlinesId) { this.airlinesId = airlinesId; }
+
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", boardNumber='" + boardNumber + '\'' +
+                ", seatsCapacity=" + seatsCapacity +
+                ", yearProduction=" + yearProduction +
+                ", airlinesId=" + airlinesId +
+                '}';
+    }
 }
