@@ -2,7 +2,7 @@ package com.solvd.airport.models;
 
 import java.time.LocalDate;
 
-public class User {
+public abstract class User {
     private Long id;
     private String firstName;
     private String lastName;
