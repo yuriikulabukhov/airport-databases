@@ -10,6 +10,8 @@ public class Airline {
     private String contactEmail;
     private String maintenanceProvider;
 
+    public Airline() {}
+
     public Airline(Long id, String name, BigDecimal safetyRating, Integer fleetSize,
                    String contactEmail, String maintenanceProvider) {
         this.id = id;
