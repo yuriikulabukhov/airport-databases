@@ -22,7 +22,7 @@ public abstract class AbstractMySQLDB {
         Properties props = new Properties();
         try (InputStream in = AbstractMySQLDB.class.getClassLoader().getResourceAsStream("db.properties")) {
             if (in == null) {
-                throw new RuntimeException("db.properties not found in classpath");
+                throw new RuntimeException("db.properties not found");
             }
             props.load(in);
         } catch (IOException e) {

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<airportData>
+    <airlines>
+        <airline>
+            <id>1</id>
+            <name>Ukraine International Airlines</name>
+            <safetyRating>5.0</safetyRating>
+            <fleetSize>2</fleetSize>
+            <contactEmail>info@uia.ua</contactEmail>
+            <maintenanceProvider>Kiev Technik</maintenanceProvider>
+            <planes>
+                <plane>
+                    <id>1</id>
+                    <model>Boeing 737</model>
+                    <boardNumber>UA-QAZ</boardNumber>
+                    <seatsCapacity>160</seatsCapacity>
+                    <yearProduction>2020</yearProduction>
+                </plane>
+                <plane>
+                    <id>2</id>
+                    <model>Airbus A320</model>
+                    <boardNumber>UA-DAA</boardNumber>
+                    <seatsCapacity>120</seatsCapacity>
+                    <yearProduction>2018</yearProduction>
+                </plane>
+            </planes>
+        </airline>
+    </airlines>
+
+    <flights>
+        <flight>
+            <id>1</id>
+            <flightNumber>PS666</flightNumber>
+            <departureTime>2026-04-20T10:00:00</departureTime>
+            <arrivalTime>2026-04-20T12:30:00</arrivalTime>
+            <gate>
+                <id>1</id>
+                <gateNumber>D1</gateNumber>
+                <floorLevel>1</floorLevel>
+                <currentStatus>open</currentStatus>
+                <boardingStartTime>2026-04-23T09:00:00</boardingStartTime>
+                <terminal>
+                    <id>1</id>
+                    <terminalName>Terminal D</terminalName>
+                    <capacity>2000</capacity>
+                    <checkInCount>20</checkInCount>
+                    <luggageBelts>10</luggageBelts>
+                    <workingHours>24:00:00</workingHours>
+                </terminal>
+            </gate>
+        </flight>
+        <flight>
+            <id>2</id>
+            <flightNumber>PS777</flightNumber>
+            <departureTime>2026-04-20T14:00:00</departureTime>
+            <arrivalTime>2026-04-20T16:45:00</arrivalTime>
+            <gate>
+                <id>2</id>
+                <gateNumber>D2</gateNumber>
+                <floorLevel>1</floorLevel>
+                <currentStatus>boarding</currentStatus>
+                <boardingStartTime>2026-04-23T13:00:00</boardingStartTime>
+                <terminal>
+                    <id>1</id>
+                    <terminalName>Terminal D</terminalName>
+                    <capacity>1000</capacity>
+                    <checkInCount>10</checkInCount>
+                    <luggageBelts>5</luggageBelts>
+                    <workingHours>12:00:00</workingHours>
+                </terminal>
+            </gate>
+        </flight>
+    </flights>
+</airportData>
