@@ -46,7 +46,7 @@
                     <capacity>2000</capacity>
                     <checkInCount>20</checkInCount>
                     <luggageBelts>10</luggageBelts>
-                    <workingHours>24:00:00</workingHours>
+                    <workingHours>12:00:00</workingHours>
                 </terminal>
             </gate>
         </flight>

@@ -39,4 +39,11 @@ public class Airline {
 
     public String getMaintenanceProvider() { return maintenanceProvider; }
     public void setMaintenanceProvider(String maintenanceProvider) { this.maintenanceProvider = maintenanceProvider; }
+
+    @Override
+    public String toString() {
+        return "Airline{id=" + id + ", name='" + name + "', safetyRating=" + safetyRating +
+               ", fleetSize=" + fleetSize + ", contactEmail='" + contactEmail +
+               "', maintenanceProvider='" + maintenanceProvider + "'}";
+    }
 }

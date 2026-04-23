@@ -38,5 +38,12 @@ public class Flight {
 
     public Long getGatesId() { return gatesId; }
     public void setGatesId(Long gatesId) { this.gatesId = gatesId;}
+
+    @Override
+    public String toString() {
+        return "Flight{id=" + id + ", flightNumber='" + flightNumber +
+               "', departureTime=" + departureTime + ", arrivalTime=" + arrivalTime +
+               ", gatesId=" + gatesId + "}";
+    }
 }
 

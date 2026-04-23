@@ -1,0 +1,28 @@
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Airlines ===
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Airline{id=1, name='Ukraine International Airlines', safetyRating=5.0, fleetSize=2, contactEmail='info@uia.ua', maintenanceProvider='Kiev Technik'}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Planes ===
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Plane{id=1, model='Boeing 737', boardNumber='UA-QAZ', seatsCapacity=160, yearProduction=2020, airlinesId=1}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Plane{id=2, model='Airbus A320', boardNumber='UA-DAA', seatsCapacity=120, yearProduction=2018, airlinesId=1}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Flights ===
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Flight{id=1, flightNumber='PS666', departureTime=2026-04-20T10:00, arrivalTime=2026-04-20T12:30, gatesId=1}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Flight{id=2, flightNumber='PS777', departureTime=2026-04-20T14:00, arrivalTime=2026-04-20T16:45, gatesId=2}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Gates ===
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Gate{id=1, gateNumber='D1', floorLevel=1, currentStatus='open', boardingStartTime=2026-04-23T09:00, terminalsId=1}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Gate{id=2, gateNumber='D2', floorLevel=1, currentStatus='boarding', boardingStartTime=2026-04-23T13:00, terminalsId=1}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Terminals ===
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Terminal{id=1, terminalName='Terminal D', capacity=2000, checkInCount=20, luggageBelts=10, workingHours=12:00, airportInfoId=null}
+2026-04-23 14:34:23 [INFO ] com.solvd.airport.xml.XMLParserSAX - Terminal{id=1, terminalName='Terminal D', capacity=1000, checkInCount=10, luggageBelts=5, workingHours=12:00, airportInfoId=null}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Airlines ===
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Airline{id=1, name='Ukraine International Airlines', safetyRating=5.0, fleetSize=2, contactEmail='info@uia.ua', maintenanceProvider='Kiev Technik'}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Planes ===
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Plane{id=1, model='Boeing 737', boardNumber='UA-QAZ', seatsCapacity=160, yearProduction=2020, airlinesId=1}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Plane{id=2, model='Airbus A320', boardNumber='UA-DAA', seatsCapacity=120, yearProduction=2018, airlinesId=1}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Flights ===
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Flight{id=1, flightNumber='PS666', departureTime=2026-04-20T10:00, arrivalTime=2026-04-20T12:30, gatesId=1}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Flight{id=2, flightNumber='PS777', departureTime=2026-04-20T14:00, arrivalTime=2026-04-20T16:45, gatesId=2}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Gates ===
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Gate{id=1, gateNumber='D1', floorLevel=1, currentStatus='open', boardingStartTime=2026-04-23T09:00, terminalsId=1}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Gate{id=2, gateNumber='D2', floorLevel=1, currentStatus='boarding', boardingStartTime=2026-04-23T13:00, terminalsId=1}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - === Terminals ===
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Terminal{id=1, terminalName='Terminal D', capacity=2000, checkInCount=20, luggageBelts=10, workingHours=12:00, airportInfoId=null}
+2026-04-23 14:37:58 [INFO ] com.solvd.airport.xml.XMLParserSAX - Terminal{id=1, terminalName='Terminal D', capacity=1000, checkInCount=10, luggageBelts=5, workingHours=12:00, airportInfoId=null}
