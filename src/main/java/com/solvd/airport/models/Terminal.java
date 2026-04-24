@@ -15,10 +15,8 @@ public class Terminal {
     private Integer capacity;
     private Integer checkInCount;
     private Integer luggageBelts;
-
     @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     private java.time.LocalTime workingHours;
-
     @XmlTransient
     private Long airportInfoId;
 
