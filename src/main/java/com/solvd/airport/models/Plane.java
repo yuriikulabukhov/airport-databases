@@ -1,12 +1,19 @@
 package com.solvd.airport.models;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlTransient;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Plane {
     private Long id;
     private String model;
     private String boardNumber;
     private Integer seatsCapacity;
     private Integer yearProduction;
+    @XmlTransient
     private Long airlinesId;
+
     public Plane() {}
     public Plane(Long id, String model, String boardNumber, Integer seatsCapacity,
                  Integer yearProduction, Long airlinesId) {

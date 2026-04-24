@@ -52,7 +52,7 @@ public class AirportHandler extends DefaultHandler {
             case "airline"  -> { airlines.add(currentAirline);                                   context = "";        }
             case "plane"    -> { currentPlane.setAirlinesId(currentAirline.getId());
                                  planes.add(currentPlane);                                        context = "airline"; }
-            case "flight"   -> { flights.add(currentFlight);                                     context = "";        }
+            case "flight"   -> { flights.add(currentFlight);                                     context = "airline"; }
             case "gate"     -> { currentFlight.setGatesId(currentGate.getId());
                                  gates.add(currentGate);                                          context = "flight";  }
             case "terminal" -> { currentGate.setTerminalsId(currentTerminal.getId());

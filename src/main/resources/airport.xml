@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<airportData>
-    <airlines>
-        <airline>
+<airline>
+    <id>1</id>
+    <name>Ukraine International Airlines</name>
+    <safetyRating>5.0</safetyRating>
+    <fleetSize>2</fleetSize>
+    <contactEmail>info@uia.ua</contactEmail>
+    <maintenanceProvider>Kiev Technik</maintenanceProvider>
+
+    <planes>
+        <plane>
             <id>1</id>
-            <name>Ukraine International Airlines</name>
-            <safetyRating>5.0</safetyRating>
-            <fleetSize>2</fleetSize>
-            <contactEmail>info@uia.ua</contactEmail>
-            <maintenanceProvider>Kiev Technik</maintenanceProvider>
-            <planes>
-                <plane>
-                    <id>1</id>
-                    <model>Boeing 737</model>
-                    <boardNumber>UA-QAZ</boardNumber>
-                    <seatsCapacity>160</seatsCapacity>
-                    <yearProduction>2020</yearProduction>
-                </plane>
-                <plane>
-                    <id>2</id>
-                    <model>Airbus A320</model>
-                    <boardNumber>UA-DAA</boardNumber>
-                    <seatsCapacity>120</seatsCapacity>
-                    <yearProduction>2018</yearProduction>
-                </plane>
-            </planes>
-        </airline>
-    </airlines>
+            <model>Boeing 737</model>
+            <boardNumber>UA-QAZ</boardNumber>
+            <seatsCapacity>160</seatsCapacity>
+            <yearProduction>2020</yearProduction>
+        </plane>
+        <plane>
+            <id>2</id>
+            <model>Airbus A320</model>
+            <boardNumber>UA-DAA</boardNumber>
+            <seatsCapacity>120</seatsCapacity>
+            <yearProduction>2018</yearProduction>
+        </plane>
+    </planes>
 
     <flights>
         <flight>
@@ -72,4 +69,4 @@
             </gate>
         </flight>
     </flights>
-</airportData>
+</airline>

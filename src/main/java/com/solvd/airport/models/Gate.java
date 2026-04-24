@@ -1,14 +1,25 @@
 package com.solvd.airport.models;
 
+import com.solvd.airport.xml.LocalDateTimeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import java.time.LocalDateTime;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Gate {
     private Long id;
     private String gateNumber;
     private Integer floorLevel;
     private String currentStatus;
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private java.time.LocalDateTime boardingStartTime;
+    @XmlTransient
     private Long terminalsId;
+    private Terminal terminal;
+
     public Gate() {}
 
     public Gate(Long id, String gateNumber, Integer floorLevel, String currentStatus,
@@ -38,6 +49,9 @@ public class Gate {
 
     public Long getTerminalsId() { return terminalsId; }
     public void setTerminalsId(Long terminalsId) { this.terminalsId = terminalsId; }
+
+    public Terminal getTerminal() { return terminal; }
+    public void setTerminal(Terminal terminal) { this.terminal = terminal; }
 
     @Override
     public String toString() {

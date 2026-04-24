@@ -1,14 +1,25 @@
 package com.solvd.airport.models;
 
+import com.solvd.airport.xml.LocalTimeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import java.time.LocalTime;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Terminal {
     private Long id;
     private String terminalName;
     private Integer capacity;
     private Integer checkInCount;
     private Integer luggageBelts;
+
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     private java.time.LocalTime workingHours;
+
+    @XmlTransient
     private Long airportInfoId;
 
     public Terminal() {}

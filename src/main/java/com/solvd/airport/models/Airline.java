@@ -1,7 +1,16 @@
 package com.solvd.airport.models;
 
-import java.math.BigDecimal;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+@XmlRootElement(name = "airline")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Airline {
     private Long id;
     private String name;
@@ -9,6 +18,12 @@ public class Airline {
     private Integer fleetSize;
     private String contactEmail;
     private String maintenanceProvider;
+    @XmlElementWrapper(name = "planes")
+    @XmlElement(name = "plane")
+    private List<Plane> planes;
+    @XmlElementWrapper(name = "flights")
+    @XmlElement(name = "flight")
+    private List<Flight> flights;
 
     public Airline() {}
 
@@ -39,6 +54,12 @@ public class Airline {
 
     public String getMaintenanceProvider() { return maintenanceProvider; }
     public void setMaintenanceProvider(String maintenanceProvider) { this.maintenanceProvider = maintenanceProvider; }
+
+    public List<Plane> getPlanes() { return planes; }
+    public void setPlanes(List<Plane> planes) { this.planes = planes; }
+
+    public List<Flight> getFlights() { return flights; }
+    public void setFlights(List<Flight> flights) { this.flights = flights; }
 
     @Override
     public String toString() {
