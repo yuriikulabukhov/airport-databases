@@ -1,5 +1,10 @@
 package com.solvd.airport.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.solvd.airport.json.LocalTimeDeserializer;
+import com.solvd.airport.json.LocalTimeSerializer;
 import com.solvd.airport.xml.LocalTimeAdapter;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -15,8 +20,11 @@ public class Terminal {
     private Integer capacity;
     private Integer checkInCount;
     private Integer luggageBelts;
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
     @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     private java.time.LocalTime workingHours;
+    @JsonIgnore
     @XmlTransient
     private Long airportInfoId;
 

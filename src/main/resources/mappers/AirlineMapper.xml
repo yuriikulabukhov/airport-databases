@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.airport.dao.IAirlineDAO">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO AIRLINES (NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER)
+        VALUES (#{name}, #{safetyRating}, #{fleetSize}, #{contactEmail}, #{maintenanceProvider})
+    </insert>
+
+    <update id="update">
+        UPDATE AIRLINES
+        SET NAME                = #{name},
+            SAFETY_RATING       = #{safetyRating},
+            FLEET_SIZE          = #{fleetSize},
+            CONTACT_EMAIL       = #{contactEmail},
+            MAITENANCE_PROVIDER = #{maintenanceProvider}
+        WHERE ID = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM AIRLINES
+        WHERE ID = #{id}
+    </delete>
+
+    <select id="getById" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE ID = #{id}
+    </select>
+
+    <select id="getAll" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+    </select>
+
+    <select id="getByName" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE NAME = #{name}
+    </select>
+
+    <select id="getByContactEmail" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE CONTACT_EMAIL = #{contactEmail}
+    </select>
+
+    <select id="getByMaintenanceProvider" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE MAITENANCE_PROVIDER = #{maintenanceProvider}
+    </select>
+
+    <select id="getWithSafetyRatingGreaterThan" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE SAFETY_RATING > #{minRating}
+    </select>
+
+    <select id="getWithFleetSizeGreaterThan" resultMap="AirlineResultMap">
+        SELECT ID, NAME, SAFETY_RATING, FLEET_SIZE, CONTACT_EMAIL, MAITENANCE_PROVIDER
+        FROM AIRLINES
+        WHERE FLEET_SIZE > #{minFleetSize}
+    </select>
+
+    <resultMap id="AirlineResultMap" type="com.solvd.airport.models.Airline">
+        <id     property="id"                  column="ID"                  />
+        <result property="name"                column="NAME"                />
+        <result property="safetyRating"        column="SAFETY_RATING"       />
+        <result property="fleetSize"           column="FLEET_SIZE"          />
+        <result property="contactEmail"        column="CONTACT_EMAIL"       />
+        <result property="maintenanceProvider" column="MAITENANCE_PROVIDER" />
+    </resultMap>
+
+</mapper>

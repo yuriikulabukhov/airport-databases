@@ -1,0 +1,68 @@
+{
+  "id": 1,
+  "name": "Ukraine International Airlines",
+  "safetyRating": 5.0,
+  "fleetSize": 2,
+  "contactEmail": "info@uia.ua",
+  "maintenanceProvider": "Kiev Technik",
+  "planes": [
+    {
+      "id": 1,
+      "model": "Boeing 737",
+      "boardNumber": "UA-QAZ",
+      "seatsCapacity": 160,
+      "yearProduction": 2020
+    },
+    {
+      "id": 2,
+      "model": "Airbus A320",
+      "boardNumber": "UA-DAA",
+      "seatsCapacity": 120,
+      "yearProduction": 2018
+    }
+  ],
+  "flights": [
+    {
+      "id": 1,
+      "flightNumber": "PS666",
+      "departureTime": "2026-04-20T10:00:00",
+      "arrivalTime": "2026-04-20T12:30:00",
+      "gate": {
+        "id": 1,
+        "gateNumber": "D1",
+        "floorLevel": 1,
+        "currentStatus": "open",
+        "boardingStartTime": "2026-04-23T09:00:00",
+        "terminal": {
+          "id": 1,
+          "terminalName": "Terminal D",
+          "capacity": 2000,
+          "checkInCount": 20,
+          "luggageBelts": 10,
+          "workingHours": "12:00:00"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "flightNumber": "PS777",
+      "departureTime": "2026-04-20T14:00:00",
+      "arrivalTime": "2026-04-20T16:45:00",
+      "gate": {
+        "id": 2,
+        "gateNumber": "D2",
+        "floorLevel": 1,
+        "currentStatus": "boarding",
+        "boardingStartTime": "2026-04-23T13:00:00",
+        "terminal": {
+          "id": 1,
+          "terminalName": "Terminal D",
+          "capacity": 1000,
+          "checkInCount": 10,
+          "luggageBelts": 5,
+          "workingHours": "12:00:00"
+        }
+      }
+    }
+  ]
+}

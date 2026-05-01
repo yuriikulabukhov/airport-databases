@@ -1,5 +1,10 @@
 package com.solvd.airport.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.solvd.airport.json.LocalDateTimeDeserializer;
+import com.solvd.airport.json.LocalDateTimeSerializer;
 import com.solvd.airport.xml.LocalDateTimeAdapter;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -11,12 +16,18 @@ import java.time.LocalDateTime;
 public class Flight {
     private Long id;
     private String flightNumber;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private LocalDateTime departureTime;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private LocalDateTime arrivalTime;
+    @JsonIgnore
     @XmlTransient
     private Long planesId;
+    @JsonIgnore
     @XmlTransient
     private Long gatesId;
     private Gate gate;

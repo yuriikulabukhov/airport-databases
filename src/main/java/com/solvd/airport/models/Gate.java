@@ -1,5 +1,10 @@
 package com.solvd.airport.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.solvd.airport.json.LocalDateTimeDeserializer;
+import com.solvd.airport.json.LocalDateTimeSerializer;
 import com.solvd.airport.xml.LocalDateTimeAdapter;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -14,8 +19,11 @@ public class Gate {
     private String gateNumber;
     private Integer floorLevel;
     private String currentStatus;
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private java.time.LocalDateTime boardingStartTime;
+    @JsonIgnore
     @XmlTransient
     private Long terminalsId;
     private Terminal terminal;

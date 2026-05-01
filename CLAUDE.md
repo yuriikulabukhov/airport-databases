@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Coding Rules
+
+- Don't add features, refactor, or introduce abstractions beyond what the task requires. Three similar lines is better than a premature abstraction. No half-finished implementations either.
+
 ## Build & Run Commands
 
 ```bash

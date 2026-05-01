@@ -1,5 +1,6 @@
 package com.solvd.airport.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlTransient;
@@ -11,6 +12,7 @@ public class Plane {
     private String boardNumber;
     private Integer seatsCapacity;
     private Integer yearProduction;
+    @JsonIgnore
     @XmlTransient
     private Long airlinesId;
 
