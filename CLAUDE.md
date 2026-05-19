@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Coding Rules
 
 - Don't add features, refactor, or introduce abstractions beyond what the task requires. Three similar lines is better than a premature abstraction. No half-finished implementations either.
+- Always ask what pattern or approach is expected before designing the implementation.
 
 ## Build & Run Commands
 

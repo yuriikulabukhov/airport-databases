@@ -138,3 +138,9 @@
 2026-05-01 14:38:47 [INFO ] com.solvd.airport.Main -  terminal: Terminal{id=1, terminalName='Terminal D', capacity=1000, checkInCount=10, luggageBelts=5, workingHours=12:00, airportInfoId=null}
 2026-05-01 14:38:47 [INFO ] com.solvd.airport.json.JsonParser - Airline serialized to JSON: Ukraine International Airlines
 2026-05-01 14:38:47 [INFO ] com.solvd.airport.Main - Re-serialized to airline-output.json
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] ADDING NODE SampleTestNGTest.testString()[pri:0, instance:com.solvd.airport.SampleTestNGTest@3ee37e5a] 364271863
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] ADDING NODE SampleTestNGTest.testAddition()[pri:0, instance:com.solvd.airport.SampleTestNGTest@3ee37e5a] 27669490
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] ================ SORTING
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] =============== DONE SORTING
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] ====== SORTED NODES
+2026-05-19 12:55:38 [DEBUG] org.testng.internal.Graph - [Graph] ====== END SORTED NODES
